@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Character Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        img {
+            width: 300px;
+            display: block;
+            margin-top: 15px;
+        }
+        select {
+            padding: 6px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hello!</h1>
+
+    <!-- Image -->
+    <img id="characterImage" src="images/garfield.png" alt="Character">
+
+    <!-- Dropdown -->
+    <select onchange="changeImage(this.value)">
+        <option value="garfield">Garfield</option>
+        <option value="odie">Odie</option>
+        <option value="normal">Normal</option>
+        <option value="jon">Jon</option>
+    </select>
+
+    <script>
+        function changeImage(character) {
+            const img = document.getElementById("characterImage");
+            img.src = "images/" + character + ".png";
+        }
+    </script>
+
+</body>
+</html>
